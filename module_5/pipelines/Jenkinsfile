@@ -48,7 +48,7 @@ pipeline {
         stage('Delivery') { 
             steps {
                 // 
-                echo 'Delivering'
+                echo 'Delivering 13'
                 withCredentials([azureServicePrincipal('b49a4eef-246e-48db-8396-c7ce528b34ea')]) {
                     sh 'az login --service-principal -u $AZURE_CLIENT_ID -p $AZURE_CLIENT_SECRET -t $AZURE_TENANT_ID'
                     sh '''
